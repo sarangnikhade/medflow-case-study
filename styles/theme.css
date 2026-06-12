@@ -1,0 +1,211 @@
+/* =========================================================================
+   MedFlow Case Study — "Clinical Calm" Health Theme
+   Modern, elegant, editorial. Deep navy + fresh medical teal + warm coral.
+   ========================================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,18..72,400;1,18..72,500&family=Source+Code+Pro:wght@500;600&display=swap");
+
+:root {
+  /* ---- Brand ---- */
+  --teal:        #12B5A6;   /* fresh medical teal — primary accent */
+  --teal-bright: #1FD4C2;
+  --teal-deep:   #0B8576;   /* on-light emphasis / links */
+  --teal-ink:    #064E48;
+  --mint:        #DFF6F2;   /* soft success / feature surface */
+  --mint-bright: #C9F0E9;
+
+  --coral:       #FF7A6B;   /* warm human/empathy accent */
+  --coral-deep:  #E0503F;
+  --coral-soft:  #FFE9E5;
+
+  /* Category accents (sparing, for tags only) */
+  --blue:   #4F8BFF;
+  --violet: #8B7CF6;
+  --amber:  #F5A524;
+
+  /* ---- Ink / text ---- */
+  --ink:    #0C1A2B;   /* headings + strong text */
+  --slate:  #3A4A5C;   /* body */
+  --steel:  #5E7081;
+  --stone:  #8A9AA8;   /* labels */
+  --muted:  #B6C2CC;
+
+  /* ---- Surfaces ---- */
+  --canvas:       #FBFCFE;
+  --surface:      #F2F6F9;   /* quiet section band */
+  --surface-soft: #F8FAFC;
+  --on-dark:      #FFFFFF;
+  --on-dark-mut:  rgba(255,255,255,0.66);
+  --on-dark-dim:  rgba(255,255,255,0.40);
+
+  /* Dark brand band */
+  --navy:      #0A1826;
+  --navy-2:    #0E2A38;
+  --navy-deep: #060F1A;
+
+  /* ---- Lines ---- */
+  --line:        #E5ECF1;
+  --line-soft:   #EFF3F6;
+  --line-strong: #D5DEE5;
+  --line-dark:   rgba(255,255,255,0.14);
+
+  /* ---- Type ---- */
+  --font-display: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif:   "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono:    "Source Code Pro", "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---- Radius ---- */
+  --r-sm:  8px;
+  --r-md:  12px;
+  --r-lg:  18px;
+  --r-xl:  24px;
+  --r-full: 9999px;
+
+  /* ---- Elevation (soft, layered) ---- */
+  --shadow-sm: 0 1px 2px rgba(12,26,43,0.04), 0 1px 1px rgba(12,26,43,0.03);
+  --shadow-md: 0 4px 16px -4px rgba(12,26,43,0.08), 0 2px 6px -2px rgba(12,26,43,0.05);
+  --shadow-lg: 0 18px 40px -12px rgba(12,26,43,0.16), 0 6px 14px -6px rgba(12,26,43,0.08);
+  --shadow-teal: 0 14px 36px -10px rgba(18,181,166,0.35);
+
+  /* ---- Layout / motion ---- */
+  --container: 1180px;
+  --gutter: 40px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 1180px;
+  font-family: var(--font-body);
+  color: var(--slate);
+  background: var(--canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+
+h1 { font-family: var(--font-display); font-weight: 600; color: var(--ink); letter-spacing: -0.03em; }
+h2 { font-family: var(--font-display); font-weight: 600; color: var(--ink); font-size: 38px; line-height: 1.15; letter-spacing: -0.025em; }
+h3 { font-family: var(--font-display); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+
+/* =========================================================
+   LAYOUT HELPERS
+   ========================================================= */
+.wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: 104px 0; }
+.section-alt { background: var(--surface); }
+
+/* Eyebrow / micro label */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+/* Section header with oversized index number */
+.sec-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 26px;
+  margin-bottom: 56px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.sec-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 84px;
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  background: linear-gradient(150deg, var(--teal) 0%, var(--teal-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex-shrink: 0;
+}
+.sec-head h2 { margin-top: 4px; }
+
+.group-label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+.card {
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--ease) .35s, box-shadow var(--ease) .35s, border-color var(--ease) .35s;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--line-strong);
+}
+.card-pad { padding: 30px; }
+
+.card-dark {
+  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);
+  border-radius: var(--r-lg);
+  color: var(--on-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   BADGES / CHIPS
+   ========================================================= */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 11px; letter-spacing: 0.04em;
+  padding: 4px 11px; border-radius: var(--r-full);
+}
+.badge-teal   { background: var(--mint); color: var(--teal-ink); }
+.badge-coral  { background: var(--coral-soft); color: var(--coral-deep); }
+.badge-ghost  { background: var(--surface); color: var(--stone); border: 1px solid var(--line-strong); }
+.badge-up     { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px; }
+
+/* Q-number tile */
+.qtile {
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-weight: 600;
+  background: linear-gradient(150deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--teal-bright);
+  flex-shrink: 0;
+  border-radius: var(--r-md);
+}
+
+/* Icon medallion */
+.medallion {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--r-md); flex-shrink: 0;
+}
+
+/* glow blobs for dark surfaces */
+.glow {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  filter: blur(8px);
+}
+
+/* dotted/hatched lock overlay */
+.hatch {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 11px, rgba(255,255,255,0.018) 11px, rgba(255,255,255,0.018) 12px);
+}
+
+@keyframes pulse-dot { 0%,100%{opacity:.45} 50%{opacity:1} }
+.live-dot { animation: pulse-dot 2s var(--ease) infinite; }

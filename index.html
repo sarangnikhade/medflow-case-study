@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedFlow · UX Case Study</title>
+<link rel="stylesheet" href="styles/theme.css">
+</head>
+<body>
+
+<!-- ─── STICKY TOP NAV ──────────────────────────────────────────────────── -->
+<header style="position: sticky; top: 0; z-index: 100; height: 64px; background: rgba(251,252,254,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);">
+  <div class="wrap" style="height: 100%; display: flex; align-items: center; justify-content: space-between;">
+
+    <a href="#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
+      <span style="width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(150deg, var(--teal) 0%, var(--teal-deep) 100%); box-shadow: var(--shadow-teal); display: flex; align-items: center; justify-content: center;">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 2.5v13M2.5 9h13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </span>
+      <span style="font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--ink); letter-spacing: -0.02em;">MedFlow</span>
+      <span style="font: 400 13px/1 var(--font-body); color: var(--stone);">UX Case Study</span>
+    </a>
+
+    <!-- Week progress tracker -->
+    <div style="display: flex; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 7px;">
+        <span style="width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(150deg, var(--teal) 0%, var(--teal-deep) 100%); display: flex; align-items: center; justify-content: center;">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.6l2.4 2.4L9 3.4" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span style="font: 600 12px/1 var(--font-body); color: var(--teal-deep);">Week 1</span>
+        <span class="badge badge-teal badge-up">Done</span>
+      </div>
+
+      <span style="width: 30px; height: 1px; background: var(--line-strong); margin: 0 12px;"></span>
+
+      <div style="display: flex; align-items: center; gap: 7px;">
+        <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--canvas); border: 1.5px solid var(--line-strong); display: flex; align-items: center; justify-content: center;">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><rect x="2.5" y="4.4" width="5" height="4" rx=".8" stroke="#8A9AA8" stroke-width="1.2"/><path d="M3.5 4.4V3.2a1.5 1.5 0 013 0v1.2" stroke="#8A9AA8" stroke-width="1.2"/></svg>
+        </span>
+        <span style="font: 500 12px/1 var(--font-body); color: var(--stone);">Week 2</span>
+      </div>
+
+      <span style="width: 30px; height: 1px; background: var(--line); margin: 0 12px;"></span>
+
+      <div style="display: flex; align-items: center; gap: 7px;">
+        <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--canvas); border: 1.5px solid var(--line); display: flex; align-items: center; justify-content: center;">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><rect x="2.5" y="4.4" width="5" height="4" rx=".8" stroke="#B6C2CC" stroke-width="1.2"/><path d="M3.5 4.4V3.2a1.5 1.5 0 013 0v1.2" stroke="#B6C2CC" stroke-width="1.2"/></svg>
+        </span>
+        <span style="font: 500 12px/1 var(--font-body); color: var(--muted);">Week 3</span>
+      </div>
+
+      <span style="width: 30px; height: 1px; background: var(--line); margin: 0 12px;"></span>
+
+      <div style="display: flex; align-items: center; gap: 7px;">
+        <span style="width: 22px; height: 22px; border-radius: 50%; background: var(--canvas); border: 1.5px solid var(--line); display: flex; align-items: center; justify-content: center;">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><rect x="2.5" y="4.4" width="5" height="4" rx=".8" stroke="#B6C2CC" stroke-width="1.2"/><path d="M3.5 4.4V3.2a1.5 1.5 0 013 0v1.2" stroke="#B6C2CC" stroke-width="1.2"/></svg>
+        </span>
+        <span style="font: 500 12px/1 var(--font-body); color: var(--muted);">Week 4</span>
+      </div>
+    </div>
+
+    <span class="eyebrow">Health Adherence</span>
+  </div>
+</header>
+
+<!-- ─── HERO ──────────────────────────────────────────────────────────────── -->
+<section id="top" style="background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 46%, var(--navy-2) 100%); padding: 118px 0 108px; position: relative; overflow: hidden;">
+  <div class="glow" style="top: -120px; right: -60px; width: 520px; height: 520px; background: radial-gradient(circle, var(--teal) 0%, transparent 66%); opacity: 0.16;"></div>
+  <div class="glow" style="bottom: -160px; left: 30%; width: 480px; height: 480px; background: radial-gradient(circle, var(--blue) 0%, transparent 68%); opacity: 0.10;"></div>
+  <div class="glow" style="top: 40%; left: -120px; width: 360px; height: 360px; background: radial-gradient(circle, var(--coral) 0%, transparent 70%); opacity: 0.07;"></div>
+
+  <div class="wrap" style="position: relative;">
+    <div style="display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,0.06); border: 1px solid var(--line-dark); border-radius: var(--r-full); padding: 7px 16px; margin-bottom: 34px;">
+      <span class="live-dot" style="width: 7px; height: 7px; border-radius: 50%; background: var(--teal-bright); box-shadow: 0 0 12px var(--teal);"></span>
+      <span class="eyebrow" style="color: var(--teal-bright);">UX Case Study</span>
+      <span style="color: var(--on-dark-dim);">·</span>
+      <span class="eyebrow" style="color: var(--on-dark-mut);">Medication Adherence App</span>
+    </div>
+
+    <h1 style="color: var(--on-dark); font-size: 92px; line-height: 1.0; margin-bottom: 30px;">MedFlow</h1>
+
+    <p style="font-family: var(--font-serif); font-style: italic; font-weight: 400; color: rgba(255,255,255,0.78); font-size: 27px; line-height: 1.5; max-width: 720px; margin-bottom: 56px;">
+      “People skip medications not just because they forget — but because of cost, side effects, complexity, and distrust. Most apps only solve forgetting.”
+    </p>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 11px; background: rgba(255,255,255,0.05); border: 1px solid var(--line-dark); border-radius: var(--r-md); padding: 13px 20px;">
+        <span class="eyebrow" style="color: var(--on-dark-dim);">Role</span>
+        <span style="font: 500 14px/1 var(--font-body); color: var(--on-dark);">UX Researcher + Designer</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 11px; background: rgba(255,255,255,0.05); border: 1px solid var(--line-dark); border-radius: var(--r-md); padding: 13px 20px;">
+        <span class="eyebrow" style="color: var(--on-dark-dim);">Timeline</span>
+        <span style="font: 500 14px/1 var(--font-body); color: var(--on-dark);">4 weeks</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 11px; background: rgba(255,255,255,0.05); border: 1px solid var(--line-dark); border-radius: var(--r-md); padding: 13px 20px;">
+        <span class="eyebrow" style="color: var(--on-dark-dim);">Target users</span>
+        <span style="font: 500 14px/1 var(--font-body); color: var(--on-dark);">Adults 25–65 · Daily prescriptions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 01 PROJECT OVERVIEW ───────────────────────────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <div>
+        <span class="eyebrow group-label" style="margin-bottom: 8px;">Project Overview</span>
+        <h2>Understanding the problem space</h2>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1.85fr 1fr; gap: 22px; align-items: stretch;">
+
+      <!-- Challenge card: dark -->
+      <div class="card-dark" style="padding: 52px 56px; display: flex; flex-direction: column; justify-content: center;">
+        <div class="glow" style="top: -50px; right: -50px; width: 260px; height: 260px; background: radial-gradient(circle, var(--teal) 0%, transparent 70%); opacity: 0.18;"></div>
+        <div class="glow" style="bottom: -70px; left: 30%; width: 220px; height: 220px; background: radial-gradient(circle, var(--coral) 0%, transparent 72%); opacity: 0.10;"></div>
+        <span class="eyebrow" style="color: var(--teal-bright); margin-bottom: 22px; position: relative;">The Core Problem</span>
+        <p style="font-family: var(--font-serif); font-style: italic; color: var(--on-dark); font-size: 26px; line-height: 1.5; margin: 0; max-width: 560px; position: relative;">
+          “People skip medications not just because they forget — but because of cost, side effects, complexity, and distrust. Most apps only solve forgetting.”
+        </p>
+      </div>
+
+      <!-- Meta stack -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="card card-pad" style="padding: 24px 26px;">
+          <span class="eyebrow group-label" style="margin-bottom: 8px;">My Role</span>
+          <p style="font: 600 16px/1.4 var(--font-display); color: var(--ink);">UX Researcher + Designer</p>
+        </div>
+        <div class="card card-pad" style="padding: 24px 26px;">
+          <span class="eyebrow group-label" style="margin-bottom: 8px;">Timeline</span>
+          <p style="font: 600 16px/1.4 var(--font-display); color: var(--ink);">4 weeks</p>
+        </div>
+        <div class="card card-pad" style="padding: 24px 26px; flex: 1;">
+          <span class="eyebrow group-label" style="margin-bottom: 12px;">Methods</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+            <span class="badge badge-teal">User Interviews</span>
+            <span class="badge badge-teal">Usability Testing</span>
+            <span class="badge badge-teal">Affinity Mapping</span>
+            <span class="badge badge-teal">Personas</span>
+            <span class="badge badge-teal">Journey Maps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 02 RESEARCH PLAN ──────────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="sec-head" style="border-color: var(--line-strong);">
+      <span class="sec-num">02</span>
+      <div>
+        <span class="eyebrow group-label" style="margin-bottom: 8px;">Research Plan</span>
+        <h2>What we set out to learn</h2>
+      </div>
+    </div>
+
+    <!-- Research Questions -->
+    <div style="margin-bottom: 52px;">
+      <span class="eyebrow group-label">Research Questions</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+
+        <div class="card card-hover card-pad" style="display: flex; gap: 18px; align-items: flex-start;">
+          <span style="font: 600 13px/1 var(--font-mono); color: var(--teal-deep); background: var(--mint); padding: 6px 9px; border-radius: var(--r-sm); flex-shrink: 0;">RQ1</span>
+          <p style="font: 400 15.5px/1.6 var(--font-body); color: var(--slate);">What does a typical medication routine look like day-to-day?</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; gap: 18px; align-items: flex-start;">
+          <span style="font: 600 13px/1 var(--font-mono); color: var(--teal-deep); background: var(--mint); padding: 6px 9px; border-radius: var(--r-sm); flex-shrink: 0;">RQ2</span>
+          <p style="font: 400 15.5px/1.6 var(--font-body); color: var(--slate);">What causes people to skip or delay doses — intentionally or not?</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; gap: 18px; align-items: flex-start;">
+          <span style="font: 600 13px/1 var(--font-mono); color: var(--teal-deep); background: var(--mint); padding: 6px 9px; border-radius: var(--r-sm); flex-shrink: 0;">RQ3</span>
+          <p style="font: 400 15.5px/1.6 var(--font-body); color: var(--slate);">What support systems exist and where do they break down?</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; gap: 18px; align-items: flex-start;">
+          <span style="font: 600 13px/1 var(--font-mono); color: var(--teal-deep); background: var(--mint); padding: 6px 9px; border-radius: var(--r-sm); flex-shrink: 0;">RQ4</span>
+          <p style="font: 400 15.5px/1.6 var(--font-body); color: var(--slate);">How does medication complexity affect behavior?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methods + Rationale -->
+    <div style="margin-bottom: 52px;">
+      <span class="eyebrow group-label">Methods + Rationale</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+
+        <!-- Qualitative Interviews -->
+        <div class="card card-hover card-pad">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span class="medallion" style="width: 40px; height: 40px; background: var(--mint);">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1a4 4 0 100 8 4 4 0 000-8z"/><path d="M2 15c0-3.3 2.7-5 6-5s6 1.7 6 5"/></svg>
+            </span>
+            <div>
+              <p style="font: 600 14.5px/1.2 var(--font-display); color: var(--ink);">Qualitative Interviews</p>
+              <span class="badge badge-teal" style="margin-top: 5px;">Phase 1 · First</span>
+            </div>
+          </div>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); margin-bottom: 14px;">6–8 participants · 45–60 min each</p>
+          <div style="border-top: 1px solid var(--line-soft); padding-top: 14px;">
+            <span class="eyebrow group-label" style="font-size: 10px; margin-bottom: 6px;">Rationale</span>
+            <p style="font: 400 13px/1.6 var(--font-body); color: var(--steel);">Discover real barriers before assuming answer options.</p>
+          </div>
+        </div>
+
+        <!-- Moderated Usability -->
+        <div class="card card-hover card-pad">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span class="medallion" style="width: 40px; height: 40px; background: var(--mint);">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="9" rx="1.5"/><path d="M5 14h6M8 12v2"/></svg>
+            </span>
+            <div>
+              <p style="font: 600 14.5px/1.2 var(--font-display); color: var(--ink);">Moderated Usability Testing</p>
+              <span class="badge badge-teal" style="margin-top: 5px;">Phase 2 · Later</span>
+            </div>
+          </div>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); margin-bottom: 14px;">5 participants · early prototype</p>
+          <div style="border-top: 1px solid var(--line-soft); padding-top: 14px;">
+            <span class="eyebrow group-label" style="font-size: 10px; margin-bottom: 6px;">Rationale</span>
+            <p style="font: 400 13px/1.6 var(--font-body); color: var(--steel);">Sensitive health topic — need real-time “why?” probing.</p>
+          </div>
+        </div>
+
+        <!-- Surveys excluded -->
+        <div class="card card-pad" style="background: var(--surface-soft); border-style: dashed;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <span class="medallion" style="width: 40px; height: 40px; background: var(--canvas); border: 1px solid var(--line-strong);">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#8A9AA8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h12M2 8h8M2 12h5"/></svg>
+            </span>
+            <div>
+              <p style="font: 600 14.5px/1.2 var(--font-display); color: var(--steel);">Surveys</p>
+              <span class="badge badge-ghost badge-up" style="margin-top: 5px;">Excluded</span>
+            </div>
+          </div>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--steel); margin-bottom: 14px;">Discovery phase only</p>
+          <div style="border-top: 1px solid var(--line-soft); padding-top: 14px;">
+            <span class="eyebrow group-label" style="font-size: 10px; margin-bottom: 6px;">Rationale</span>
+            <p style="font: 400 13px/1.6 var(--font-body); color: var(--steel);">Without interview findings, answer options would reflect our assumptions — not users’ reality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recruitment Criteria -->
+    <div>
+      <span class="eyebrow group-label">Recruitment Criteria</span>
+      <div class="card card-pad" style="display: flex; gap: 30px; flex-wrap: wrap; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--teal); flex-shrink: 0;"></span>
+          <span style="font: 400 14.5px/1.4 var(--font-body); color: var(--slate);">Adults managing at least one daily prescription</span>
+        </div>
+        <span style="width: 1px; height: 22px; background: var(--line);"></span>
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--teal); flex-shrink: 0;"></span>
+          <span style="font: 400 14.5px/1.4 var(--font-body); color: var(--slate);">Mix of chronic conditions</span>
+        </div>
+        <span style="width: 1px; height: 22px; background: var(--line);"></span>
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--teal); flex-shrink: 0;"></span>
+          <span style="font: 400 14.5px/1.4 var(--font-body); color: var(--slate);">Must include people who struggle with adherence</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── 03 INTERVIEW GUIDE ─────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head" style="justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; align-items: flex-end; gap: 26px;">
+        <span class="sec-num">03</span>
+        <div>
+          <span class="eyebrow group-label" style="margin-bottom: 8px;">Interview Guide</span>
+          <h2>Summary view</h2>
+        </div>
+      </div>
+      <div style="background: var(--surface); border-radius: var(--r-full); padding: 9px 18px; display: flex; align-items: center; gap: 9px; margin-bottom: 4px;">
+        <span class="live-dot" style="width: 8px; height: 8px; border-radius: 50%; background: var(--teal);"></span>
+        <span style="font: 500 13px/1 var(--font-body); color: var(--slate);">8 questions · ~45–60 min</span>
+      </div>
+    </div>
+
+    <!-- Warm-up -->
+    <div style="margin-bottom: 32px;">
+      <span class="eyebrow group-label" style="margin-bottom: 14px;">Warm-up</span>
+      <div style="background: linear-gradient(120deg, var(--mint) 0%, var(--mint-bright) 100%); border: 1px solid var(--mint-bright); border-radius: var(--r-lg); padding: 30px 32px; display: flex; gap: 22px; align-items: center;">
+        <span class="qtile" style="width: 44px; height: 44px; font-size: 14px;">Q1</span>
+        <div>
+          <p style="font: 500 17px/1.5 var(--font-display); color: var(--ink); letter-spacing: -0.01em;">Tell me about yourself — what does a typical weekday look like?</p>
+          <span style="font: 500 12.5px/1 var(--font-body); color: var(--teal-deep); margin-top: 9px; display: inline-block;">Opens the conversation · establishes context</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core questions -->
+    <div>
+      <span class="eyebrow group-label" style="margin-bottom: 14px;">Core questions</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px;">
+
+        <div class="card card-hover card-pad" style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="qtile" style="width: 34px; height: 34px; font-size: 12px;">Q2</span>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); flex: 1;">How long have you been taking your medications and how did you get started?</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="qtile" style="width: 34px; height: 34px; font-size: 12px;">Q3</span>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); flex: 1;">Walk me through your medication routine on a normal day.</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="qtile" style="width: 34px; height: 34px; font-size: 12px;">Q4</span>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); flex: 1;">Tell me about a time your routine felt difficult or got disrupted.</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="qtile" style="width: 34px; height: 34px; font-size: 12px;">Q5</span>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); flex: 1;">Who or what plays a role in your medication routine?</p>
+        </div>
+
+        <!-- Q6 — core insight, spans 2, coral-accented -->
+        <div class="card card-pad" style="grid-column: span 2; display: flex; flex-direction: column; gap: 14px; background: linear-gradient(140deg, #FFFFFF 0%, var(--coral-soft) 220%); border-color: #FAD4CD;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span class="qtile" style="width: 34px; height: 34px; font-size: 12px; background: linear-gradient(150deg, var(--coral) 0%, var(--coral-deep) 100%); color: #fff;">Q6</span>
+            <span class="badge badge-coral badge-up">Core insight question</span>
+          </div>
+          <p style="font: 500 15.5px/1.55 var(--font-display); color: var(--ink); letter-spacing: -0.01em; flex: 1;">Have you ever — consciously or not — skipped or delayed a dose? Tell me about that.</p>
+        </div>
+
+        <div class="card card-hover card-pad" style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="qtile" style="width: 34px; height: 34px; font-size: 12px;">Q7</span>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); flex: 1;">If you could change one thing about how you manage medications, what would it be?</p>
+        </div>
+        <div class="card card-hover card-pad" style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="qtile" style="width: 34px; height: 34px; font-size: 12px;">Q8</span>
+          <p style="font: 400 14px/1.6 var(--font-body); color: var(--slate); flex: 1;">Is there anything about managing medication most people wouldn’t understand?</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── 04 ASSUMPTION AUDIT ───────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="sec-head" style="border-color: var(--line-strong);">
+      <span class="sec-num">04</span>
+      <div>
+        <span class="eyebrow group-label" style="margin-bottom: 8px;">Assumption Audit</span>
+        <h2>Challenging what we think we know</h2>
+      </div>
+    </div>
+
+    <div class="card" style="overflow: hidden; box-shadow: var(--shadow-md);">
+
+      <!-- Table header -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; background: linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 100%);">
+        <div style="padding: 20px 32px; border-right: 1px solid var(--line-dark);">
+          <span class="eyebrow" style="color: var(--on-dark-mut);">Initial assumption</span>
+        </div>
+        <div style="padding: 20px 32px;">
+          <span class="eyebrow" style="color: var(--teal-bright);">What research will challenge</span>
+        </div>
+      </div>
+
+      <!-- Rows -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line);">
+        <div style="padding: 24px 32px; border-right: 1px solid var(--line); display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#8A9AA8" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3M8 11v.5"/></svg>
+          <span style="font: 500 15px/1.45 var(--font-display); color: var(--ink); letter-spacing: -0.01em;">“People forget”</span>
+        </div>
+        <div style="padding: 24px 32px; display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3.5 3.5 6.5-7"/></svg>
+          <span style="font: 400 15px/1.45 var(--font-body); color: var(--slate);">May be complexity, cost, or side effects</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); background: var(--surface-soft);">
+        <div style="padding: 24px 32px; border-right: 1px solid var(--line); display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#8A9AA8" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3M8 11v.5"/></svg>
+          <span style="font: 500 15px/1.45 var(--font-display); color: var(--ink); letter-spacing: -0.01em;">“They need a reminder app”</span>
+        </div>
+        <div style="padding: 24px 32px; display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3.5 3.5 6.5-7"/></svg>
+          <span style="font: 400 15px/1.45 var(--font-body); color: var(--slate);">Support system may already exist</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line);">
+        <div style="padding: 24px 32px; border-right: 1px solid var(--line); display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#8A9AA8" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3M8 11v.5"/></svg>
+          <span style="font: 500 15px/1.45 var(--font-display); color: var(--ink); letter-spacing: -0.01em;">“Laziness is the cause”</span>
+        </div>
+        <div style="padding: 24px 32px; display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3.5 3.5 6.5-7"/></svg>
+          <span style="font: 400 15px/1.45 var(--font-body); color: var(--slate);">Judgment word — not a real insight</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); background: var(--surface-soft);">
+        <div style="padding: 24px 32px; border-right: 1px solid var(--line); display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#8A9AA8" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3M8 11v.5"/></svg>
+          <span style="font: 500 15px/1.45 var(--font-display); color: var(--ink); letter-spacing: -0.01em;">“No one reminds them”</span>
+        </div>
+        <div style="padding: 24px 32px; display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3.5 3.5 6.5-7"/></svg>
+          <span style="font: 400 15px/1.45 var(--font-body); color: var(--slate);">Spouse, pharmacist, pillbox may already exist</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div style="padding: 24px 32px; border-right: 1px solid var(--line); display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#8A9AA8" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><path d="M8 5v3M8 11v.5"/></svg>
+          <span style="font: 500 15px/1.45 var(--font-display); color: var(--ink); letter-spacing: -0.01em;">“A notification fixes it”</span>
+        </div>
+        <div style="padding: 24px 32px; display: flex; align-items: center; gap: 15px;">
+          <svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#0B8576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3.5 3.5 6.5-7"/></svg>
+          <span style="font: 400 15px/1.45 var(--font-body); color: var(--slate);">Notification fatigue is real</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── WEEKS 2–4 LOCKED ──────────────────────────────────────────────────── -->
+<section class="section" style="background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-2) 100%); position: relative; overflow: hidden;">
+  <div class="glow" style="top: -100px; right: 10%; width: 420px; height: 420px; background: radial-gradient(circle, var(--teal) 0%, transparent 68%); opacity: 0.08;"></div>
+  <div class="wrap" style="position: relative;">
+
+    <div style="margin-bottom: 44px;">
+      <span class="eyebrow" style="color: var(--teal-bright);">Coming next</span>
+      <h2 style="color: var(--on-dark); margin-top: 10px; font-size: 34px;">Weeks 2–4 are in progress</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px;">
+
+      <!-- 05 -->
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--line-dark); border-radius: var(--r-lg); padding: 38px; position: relative; overflow: hidden;">
+        <div class="hatch"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 22px; position: relative;">
+          <span style="font: 600 38px/1 var(--font-display); color: rgba(255,255,255,0.16); letter-spacing: -0.04em;">05</span>
+          <span style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.07); border: 1px solid var(--line-dark); display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6.4" width="8" height="6" rx="1" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><path d="M5 6.4V5a2 2 0 014 0v1.4" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/></svg>
+          </span>
+        </div>
+        <span class="eyebrow" style="color: var(--on-dark-mut); display: block; margin-bottom: 10px; position: relative;">Week 2</span>
+        <p style="font: 600 20px/1.3 var(--font-display); color: rgba(255,255,255,0.55); margin-bottom: 14px; letter-spacing: -0.01em; position: relative;">Synthesis + Research Findings</p>
+        <p style="font: 400 13px/1.6 var(--font-body); color: rgba(255,255,255,0.32); position: relative;">Affinity mapping, key themes, and what users really told us.</p>
+      </div>
+
+      <!-- 06 -->
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--line-dark); border-radius: var(--r-lg); padding: 38px; position: relative; overflow: hidden;">
+        <div class="hatch"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 22px; position: relative;">
+          <span style="font: 600 38px/1 var(--font-display); color: rgba(255,255,255,0.16); letter-spacing: -0.04em;">06</span>
+          <span style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.07); border: 1px solid var(--line-dark); display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6.4" width="8" height="6" rx="1" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><path d="M5 6.4V5a2 2 0 014 0v1.4" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/></svg>
+          </span>
+        </div>
+        <span class="eyebrow" style="color: var(--on-dark-mut); display: block; margin-bottom: 10px; position: relative;">Week 3</span>
+        <p style="font: 600 20px/1.3 var(--font-display); color: rgba(255,255,255,0.55); margin-bottom: 14px; letter-spacing: -0.01em; position: relative;">Personas + Journey Maps</p>
+        <p style="font: 400 13px/1.6 var(--font-body); color: rgba(255,255,255,0.32); position: relative;">Who our users are and the emotional arc of their experience.</p>
+      </div>
+
+      <!-- 07 -->
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--line-dark); border-radius: var(--r-lg); padding: 38px; position: relative; overflow: hidden;">
+        <div class="hatch"></div>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 22px; position: relative;">
+          <span style="font: 600 38px/1 var(--font-display); color: rgba(255,255,255,0.16); letter-spacing: -0.04em;">07</span>
+          <span style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.07); border: 1px solid var(--line-dark); display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6.4" width="8" height="6" rx="1" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/><path d="M5 6.4V5a2 2 0 014 0v1.4" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/></svg>
+          </span>
+        </div>
+        <span class="eyebrow" style="color: var(--on-dark-mut); display: block; margin-bottom: 10px; position: relative;">Week 4</span>
+        <p style="font: 600 20px/1.3 var(--font-display); color: rgba(255,255,255,0.55); margin-bottom: 14px; letter-spacing: -0.01em; position: relative;">Design Decisions + Final Screens</p>
+        <p style="font: 400 13px/1.6 var(--font-body); color: rgba(255,255,255,0.32); position: relative;">How research shaped every design choice in MedFlow.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────────────────── -->
+<footer style="padding: 44px 0; background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.06);">
+  <div class="wrap" style="display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(150deg, var(--teal) 0%, var(--teal-deep) 100%); display: flex; align-items: center; justify-content: center;">
+        <svg width="15" height="15" viewBox="0 0 18 18" fill="none"><path d="M9 2.5v13M2.5 9h13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </span>
+      <span style="font: 600 14px/1 var(--font-display); color: var(--on-dark);">MedFlow</span>
+      <span style="color: var(--on-dark-dim);">·</span>
+      <span style="font: 400 13px/1 var(--font-body); color: var(--on-dark-mut);">Week 1 of 4 complete</span>
+    </div>
+    <span style="font: 400 12px/1 var(--font-body); color: var(--on-dark-dim);">UX Research · Health Adherence · 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
